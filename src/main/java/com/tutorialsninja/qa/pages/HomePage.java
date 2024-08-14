@@ -1,4 +1,4 @@
-package com.tutorialsninja.qa.PageObjectClasses;
+package com.tutorialsninja.qa.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ public class HomePage {
 	//constructor
 	public HomePage(WebDriver driver)
 	{
-		driver = this.driver;
+		this.driver = driver;
 	    PageFactory.initElements(driver, this);	
 	}
 	
@@ -50,9 +50,9 @@ public class HomePage {
 		register_tab.click();
 	}
 	
-	public void searchbar_input()
+	public void searchbar_input(String user)
 	{
-		searchbar.sendKeys(null);
+		searchbar.sendKeys(user);
 	}
 	
 	

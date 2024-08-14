@@ -1,5 +1,4 @@
 package com.tutorialsninja.qa.testcases;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -7,6 +6,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.tutorialsninja.qa.base.Base;
+import com.tutorialsninja.qa.pages.HomePage;
+import com.tutorialsninja.qa.pages.LoginPage;
+import com.tutorialsninja.qa.pages.MyAccountPage;
 import com.tutorialsninja.qa.util.Utilities;
 
 public class LoginTest extends Base{
@@ -21,8 +23,9 @@ public class LoginTest extends Base{
 	public void setup()
 	{
         driver = OpenApp(prop.getProperty("browsername")); 
-		driver.findElement(By.xpath("//span[contains(text(),'My Account')]")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
+        HomePage homepage = new HomePage(driver);
+        homepage.myaccount_tab_click();
+        homepage.login_tab_click();
 	}
 	
 	@AfterMethod 
@@ -34,13 +37,15 @@ public class LoginTest extends Base{
 	@Test(priority=1, dataProvider="dp") 
 	public void VerifyUsingValid(String email, String password)
 	{
-		driver.findElement(By.id("input-email")).sendKeys(email);
-		driver.findElement(By.id("input-password")).sendKeys(password);
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.input_email_bar(email);
+		loginpage.input_password_bar(password);
+		loginpage.click_login_button();
 		
-	    boolean status = driver.findElement(By.linkText("Edit your account information")).isDisplayed();
-		
-		Assert.assertTrue(status,"Account information is not displayed");
+		MyAccountPage myaccountpage = new MyAccountPage(driver);
+		myaccountpage.display_edityouraccountinfo();
+	
+		Assert.assertTrue(myaccountpage.display_edityouraccountinfo(),"Account information is not displayed");
 	}
 	
 	//hardcoding of multiple data
@@ -66,49 +71,39 @@ public class LoginTest extends Base{
 	@Test(priority=2)
 	public void VerifyUsingInvalid()
 	{
-		driver.findElement(By.id("input-email")).sendKeys(Utilities.generateemailtimestamp());
-		driver.findElement(By.id("input-password")).sendKeys(dataprop.getProperty("invalidPassword"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		
-        String warning_message = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-		
-		Assert.assertEquals(warning_message, dataprop.getProperty("warning"), "Account information is not displayed");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.input_email_bar(Utilities.generateemailtimestamp());
+		loginpage.input_password_bar(dataprop.getProperty("invalidPassword"));
+		loginpage.click_login_button();
+		Assert.assertEquals(loginpage.display_warning_message(), dataprop.getProperty("warning"), "Account information is not displayed");
 	}
 	
 	@Test(priority=3)
 	public void VerifyUsingValidUsernameInvalidPassword()
 	{
-		driver.findElement(By.id("input-email")).sendKeys(dataprop.getProperty("validEmailid"));
-		driver.findElement(By.id("input-password")).sendKeys(dataprop.getProperty("invalidPassword"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		
-        String warning_message = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-		
-		Assert.assertEquals(warning_message, dataprop.getProperty("warning"), "Account information is not displayed");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.input_email_bar(dataprop.getProperty("validEmailid"));
+		loginpage.input_password_bar(dataprop.getProperty("invalidPassword"));
+		loginpage.click_login_button();
+		Assert.assertEquals(loginpage.display_warning_message(), dataprop.getProperty("warning"), "Account information is not displayed");
 	}
 	
 	@Test(priority=4)
 	public void VerifyUsignInvalidUsernameValidPassword()
 	{
-		driver.findElement(By.id("input-email")).sendKeys(Utilities.generateemailtimestamp());
-		driver.findElement(By.id("input-password")).sendKeys(dataprop.getProperty("validPassword"));
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		
-        String warning_message = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-		
-		Assert.assertEquals(warning_message, dataprop.getProperty("warning"), "Account information is not displayed");	
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.input_email_bar(Utilities.generateemailtimestamp());
+		loginpage.input_password_bar(dataprop.getProperty("validPassword"));
+		loginpage.click_login_button();
+		Assert.assertEquals(loginpage.display_warning_message(), dataprop.getProperty("warning"), "Account information is not displayed");	
 	}
 	
 	@Test(priority=5)
 	public void VerifyUsingNoCredentials()
 	{
-		//driver.findElement(By.id("input-email")).sendKeys("");
-		//driver.findElement(By.id("input-password")).sendKeys("");
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-		
-        String warning_message = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
-		
-		Assert.assertEquals(warning_message, dataprop.getProperty("warning"), "Account information is not displayed");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.click_login_button();
+	    Assert.assertEquals(loginpage.display_warning_message(), dataprop.getProperty("warning"), "Account information is not displayed");
 	}
 	
 	

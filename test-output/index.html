@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Arvind singh\AppData\Local\Temp\testng-eclipse--482122058\testng-customsuite.xml</span>
+                    <span>C:\Users\Arvind singh\AppData\Local\Temp\testng-eclipse--2012093638\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,31 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.tutorialsninja.qa.testcases.LoginTest" class="method navigator-link" hash-for-method="VerifyUsingValid(amotooricap1@gmail.com, 12345)">VerifyUsingValid(amotooricap1@gmail.com, 12345)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.tutorialsninja.qa.testcases.LoginTest" class="method navigator-link" hash-for-method="VerifyUsingInvalid">VerifyUsingInvalid</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.tutorialsninja.qa.testcases.LoginTest" class="method navigator-link" hash-for-method="VerifyUsingValid(amotooricap3@gmail.com, 12345)">VerifyUsingValid(amotooricap3@gmail.com, 12345)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.tutorialsninja.qa.testcases.LoginTest" class="method navigator-link" hash-for-method="VerifyUsingValid(amotooricap9@gmail.com, 12345)">VerifyUsingValid(amotooricap9@gmail.com, 12345)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -128,42 +118,63 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.tutorialsninja.qa.testcases.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifyUsingValid(amotooricap1@gmail.com, 12345)">
-                  </a> <!-- VerifyUsingValid(amotooricap1@gmail.com, 12345) -->
-                  <span class="method-name">VerifyUsingValid</span>
-                  <span class="parameters">(amotooricap1@gmail.com,12345)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyUsingValid(amotooricap3@gmail.com, 12345)">
-                  </a> <!-- VerifyUsingValid(amotooricap3@gmail.com, 12345) -->
-                  <span class="method-name">VerifyUsingValid</span>
-                  <span class="parameters">(amotooricap3@gmail.com,12345)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyUsingValid(amotooricap9@gmail.com, 12345)">
-                  </a> <!-- VerifyUsingValid(amotooricap9@gmail.com, 12345) -->
-                  <span class="method-name">VerifyUsingValid</span>
-                  <span class="parameters">(amotooricap9@gmail.com,12345)</span>
+                  <a name="VerifyUsingInvalid">
+                  </a> <!-- VerifyUsingInvalid -->
+                  <span class="method-name">VerifyUsingInvalid</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at com.tutorialsninja.qa.pages.HomePage.myaccount_tab_click(HomePage.java:40)
+	at com.tutorialsninja.qa.testcases.LoginTest.setup(LoginTest.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Arvind singh\AppData\Local\Temp\testng-eclipse--482122058\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Arvind singh\AppData\Local\Temp\testng-eclipse--2012093638\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -174,7 +185,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.tutorialsninja.qa.testcases.LoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;VerifyUsingValid&quot;/&gt;
+          &lt;include name=&quot;VerifyUsingInvalid&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.tutorialsninja.qa.testcases.LoginTest --&gt;
     &lt;/classes&gt;
@@ -216,24 +227,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyUsingValid')
+data.setCell(0, 1, 'VerifyUsingInvalid')
 data.setCell(0, 2, 'com.tutorialsninja.qa.testcases.LoginTest')
-data.setCell(0, 3, 1520);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifyUsingValid')
-data.setCell(1, 2, 'com.tutorialsninja.qa.testcases.LoginTest')
-data.setCell(1, 3, 1417);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VerifyUsingValid')
-data.setCell(2, 2, 'com.tutorialsninja.qa.testcases.LoginTest')
-data.setCell(2, 3, 1291);
+data.setCell(0, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 2 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,13 +257,13 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.tutorialsninja.qa.testcases.LoginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">VerifyUsignInvalidUsernameValidPassword</span>
-                <br/>
                 <span class="ignored-method-name">VerifyUsingNoCredentials</span>
                 <br/>
-                <span class="ignored-method-name">VerifyUsingInvalid</span>
-                <br/>
                 <span class="ignored-method-name">VerifyUsingValidUsernameInvalidPassword</span>
+                <br/>
+                <span class="ignored-method-name">VerifyUsingValid</span>
+                <br/>
+                <span class="ignored-method-name">VerifyUsignInvalidUsernameValidPassword</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -274,41 +277,11 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.tutorialsninja.qa.testcases.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">VerifyUsingValid(amotooricap9@gmail.com, 12345)</span>
-                <span class="method-start">12702 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">14008 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">15541 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">VerifyUsingValid(amotooricap1@gmail.com, 12345)</span>
-                <span class="method-start">27430 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">28853 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">30345 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">VerifyUsingValid(amotooricap3@gmail.com, 12345)</span>
-                <span class="method-start">40174 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">41697 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
