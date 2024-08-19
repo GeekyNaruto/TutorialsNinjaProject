@@ -8,85 +8,36 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">9,499</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">18</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">319,843</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.LoginTest</td><td><a href="#m0">setup</a></td><td rowspan="1">1723615271513</td><td rowspan="1">9215</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.LoginTest</td><td><a href="#m1">teardown</a></td><td rowspan="1">1723615280892</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.LoginTest</td><td><a href="#m2">VerifyUsingInvalid</a></td><td rowspan="1">1723615280857</td><td rowspan="1">2</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.SearchTest</td><td><a href="#m0">AimtoFailTest</a></td><td rowspan="1">1723992305596</td><td rowspan="1">514</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.SearchTest</td><td><a href="#m1">AimtoSkip</a></td><td rowspan="1">1723992307754</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.tutorialsninja.qa.testcases.AddToCartTest</td><td><a href="#m2">ValidateAddToCartFeaturedItem</a></td><td rowspan="1">1723992544612</td><td rowspan="1">1957</td></tr><tr class="passedeven"><td><a href="#m3">ValidateAddToCartProductDisplayPage</a></td><td rowspan="1">1723992506182</td><td rowspan="1">3164</td></tr><tr class="passedeven"><td><a href="#m4">ValidateAddToCartSearchResultPage</a></td><td rowspan="1">1723992525901</td><td rowspan="1">3345</td></tr><tr class="passedodd"><td rowspan="7">com.tutorialsninja.qa.testcases.LoginTest</td><td><a href="#m5">VerifyUsignInvalidUsernameValidPassword</a></td><td rowspan="1">1723992478595</td><td rowspan="1">1048</td></tr><tr class="passedodd"><td><a href="#m6">VerifyUsingInvalid</a></td><td rowspan="1">1723992446722</td><td rowspan="1">1078</td></tr><tr class="passedodd"><td><a href="#m7">VerifyUsingNoCredentials</a></td><td rowspan="1">1723992493276</td><td rowspan="1">772</td></tr><tr class="passedodd"><td><a href="#m8">VerifyUsingValid</a></td><td rowspan="3">1723992430504</td><td rowspan="3">1409</td></tr><tr class="passedodd"><td><a href="#m9">VerifyUsingValid</a></td></tr><tr class="passedodd"><td><a href="#m10">VerifyUsingValid</a></td></tr><tr class="passedodd"><td><a href="#m11">VerifyUsingValidUsernameInvalidPassword</a></td><td rowspan="1">1723992465257</td><td rowspan="1">987</td></tr><tr class="passedeven"><td rowspan="4">com.tutorialsninja.qa.testcases.RegisterTest</td><td><a href="#m12">RegisterByAllFields</a></td><td rowspan="1">1723992338343</td><td rowspan="1">12033</td></tr><tr class="passedeven"><td><a href="#m13">RegisterByOnlyMandatoryField</a></td><td rowspan="1">1723992319513</td><td rowspan="1">3287</td></tr><tr class="passedeven"><td><a href="#m14">RegisterWithNoDetails</a></td><td rowspan="1">1723992380100</td><td rowspan="1">1501</td></tr><tr class="passedeven"><td><a href="#m15">RegisterWithSameDetails</a></td><td rowspan="1">1723992362790</td><td rowspan="1">1873</td></tr><tr class="passedodd"><td rowspan="4">com.tutorialsninja.qa.testcases.SearchTest</td><td><a href="#m16">SearchWithExistingProduct</a></td><td rowspan="1">1723992242372</td><td rowspan="1">972</td></tr><tr class="passedodd"><td><a href="#m17">SearchWithNonExistingProduct</a></td><td rowspan="1">1723992258124</td><td rowspan="1">771</td></tr><tr class="passedodd"><td><a href="#m18">SearchWithoutAnyProductName</a></td><td rowspan="1">1723992269653</td><td rowspan="1">3988</td></tr><tr class="passedodd"><td><a href="#m19">SearchingValidProductAfterLogin</a></td><td rowspan="1">1723992288182</td><td rowspan="1">4677</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.tutorialsninja.qa.testcases.LoginTest#setup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.tutorialsninja.qa.pages.HomePage.myaccount_tab_click(HomePage.java:40)
-	at com.tutorialsninja.qa.testcases.LoginTest.setup(LoginTest.java:28)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+<h2>Test</h2><h3 id="m0">com.tutorialsninja.qa.testcases.SearchTest#AimtoFailTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [false] but found [true]
+	at com.tutorialsninja.qa.testcases.SearchTest.AimtoFailTest(SearchTest.java:80)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.tutorialsninja.qa.testcases.LoginTest#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingInvalid</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.tutorialsninja.qa.pages.HomePage.myaccount_tab_click(HomePage.java:40)
-	at com.tutorialsninja.qa.testcases.LoginTest.setup(LoginTest.java:28)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.tutorialsninja.qa.testcases.SearchTest#AimtoSkip</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method com.tutorialsninja.qa.testcases.SearchTest.AimtoSkip() on instance com.tutorialsninja.qa.testcases.SearchTest@13c9d689 depends on not successfully finished methods 
+[com.tutorialsninja.qa.testcases.SearchTest.AimtoFailTest() on instance com.tutorialsninja.qa.testcases.SearchTest@13c9d689]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.tutorialsninja.qa.testcases.AddToCartTest#ValidateAddToCartFeaturedItem</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.tutorialsninja.qa.testcases.AddToCartTest#ValidateAddToCartProductDisplayPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.tutorialsninja.qa.testcases.AddToCartTest#ValidateAddToCartSearchResultPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsignInvalidUsernameValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingInvalid</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingNoCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingValid</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>amotooricap3@gmail.com</td><td>12345</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingValid</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>amotooricap9@gmail.com</td><td>12345</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingValid</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>amotooricap1@gmail.com</td><td>12345</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.tutorialsninja.qa.testcases.LoginTest#VerifyUsingValidUsernameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.tutorialsninja.qa.testcases.RegisterTest#RegisterByAllFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.tutorialsninja.qa.testcases.RegisterTest#RegisterByOnlyMandatoryField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">com.tutorialsninja.qa.testcases.RegisterTest#RegisterWithNoDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">com.tutorialsninja.qa.testcases.RegisterTest#RegisterWithSameDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">com.tutorialsninja.qa.testcases.SearchTest#SearchWithExistingProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">com.tutorialsninja.qa.testcases.SearchTest#SearchWithNonExistingProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">com.tutorialsninja.qa.testcases.SearchTest#SearchWithoutAnyProductName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">com.tutorialsninja.qa.testcases.SearchTest#SearchingValidProductAfterLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

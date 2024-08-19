@@ -16,7 +16,7 @@ public class SearchTest extends Base{
 		super();
 	}
 	
-	WebDriver driver; 
+	public WebDriver driver; 
 	@BeforeMethod 
 	public void Setup()
 	{
@@ -73,4 +73,17 @@ public class SearchTest extends Base{
 	    Thread.sleep(1500); 	
 	}
 	
+	@Test(priority=5)
+	public void AimtoFailTest()
+	{
+		driver.findElement(By.xpath("//i[@class='fa fa-search']")).click();
+		Assert.assertFalse(driver.findElement(By.xpath("//input[@type='button']/following-sibling::p")).isDisplayed());
+	}
+	
+	@Test(priority=6, dependsOnMethods = "AimtoFailTest")
+	public void AimtoSkip()
+	{
+		driver.findElement(By.xpath("//i[@class='fa fa-search']")).click();
+		Assert.assertTrue(driver.findElement(By.xpath("//input[@type='button']/following-sibling::p")).isDisplayed());
+	}
 }

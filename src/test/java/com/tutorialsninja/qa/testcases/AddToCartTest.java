@@ -11,7 +11,7 @@ import com.tutorialsninja.qa.base.Base;
 
 public class AddToCartTest extends Base{
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	public AddToCartTest()
 	{
